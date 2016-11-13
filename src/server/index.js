@@ -1,6 +1,7 @@
 import express from 'express'
 import bodyParser from 'body-parser'
 import wikiSearch from 'wikipedia-js'
+import cheerio from 'cheerio'
 
 const app = express()
 const portNum = process.env.PORT || 8888
@@ -18,6 +19,7 @@ app.get('/', (req, res) => {
     if (err) {
       return res.send("An error occurred[query=%s, error=%s]", query, err)
     }
+    let $ = cheerio.load(htmlWikiText)
     return res.send(htmlWikiText)
   })
 })
