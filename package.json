@@ -30,6 +30,7 @@
     "material-ui": "^0.16.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",
+    "react-line": "^1.0.2",
     "react-redux": "^4.0.0",
     "react-router": "^2.0.1",
     "redux": "^3.0.4"
